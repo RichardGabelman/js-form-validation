@@ -25,12 +25,48 @@ form {
   border-radius: 20px;
 }
 
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+.group input:valid {
+  border-color: green;
+  background-color: rgba(0, 150, 0, 0.1);
+}
+
+.group input.passwordInvalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:valid {
+  outline: none;
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+}
+
+.error.active {
+  padding: 0.3em;
+}
+
 .group {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 2px;
 }
 
 .group label::before {
@@ -39,7 +75,7 @@ form {
 }
 
 .group input {
-  width: 200px;
+  width: 250px;
   padding: 5px 6px;
   border-radius: 5px;
   border: 1px solid black;

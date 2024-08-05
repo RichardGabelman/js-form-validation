@@ -11,23 +11,28 @@
     <form novalidate>
       <div class="group">
         <label for="mail">Email:</label>
-        <input type="email">
+        <input type="email" id="mail" name="mail" required minlength="8">
+        <span class="error"></span>
       </div>
       <div class="group">
         <label for="country">Country:</label>
-        <input type="text">
+        <input type="text" id="country" name="country" required>
+        <span class="error"></span>
       </div>
       <div class="group">
         <label for="zip">Zip Code:</label>
-        <input type="text">
+        <input type="text" id="zip" name="zip" pattern="\d{5}([ \-]\d{4})?" required>
+        <span class="error"></span>
       </div>
       <div class="group">
         <label for="password">Password:</label>
-        <input type="password">
+        <input type="password" id="password" name="password" minlength="8" required>
+        <span class="error"></span>
       </div>
       <div class="group">
         <label for="passwordConfirmation">Confirm Password:</label>
-        <input type="password">
+        <input type="password" id="passwordConfirmation" name="passwordConfirmation" required>
+        <span class="error"></span>
       </div>
       <div class="btns">
         <button type="submit">Submit</button>
